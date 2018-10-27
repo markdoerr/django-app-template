@@ -1,0 +1,57 @@
+"""_____________________________________________________________________
+
+:PROJECT: LARA
+
+*{{ app_name }} models *
+
+:details: {{ app_name }} database models. 
+         -
+
+:file:    models.py
+:authors: {{ authors }}
+
+:date: (creation)          {{ creation_date }}
+:date: (last modification) {{ creation_date }}
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+__version__ = "0.0.1"
+
+from django.db import models
+
+# modify your {{ app_name }} models here - these are just examples (please replace these):
+
+class ItemCategory(models.Model):
+    """ Forum item category, e.g. technical note, comment,  
+    """
+    item_class_id = models.AutoField(primary_key=True)
+    item_class = models.TextField(unique=True)
+    description = models.TextField(blank=True)
+                
+    def __str__(self):
+        return self.description or u''
+        
+    class Meta:
+        db_table = "lara_metainfo_item_class"
+
+class ForumContribution(models.Model):
+    """ A simple forum contribution """
+    forum_contrib_id = models.AutoField(primary_key=True)
+    slug = models.SlugField(max_length=255, unique=True)
+    #~ item_category =  models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
+    contrib_caption = models.TextField()
+    contrib_text = models.TextField()
+    date_creation = models.DateTime()
+    # user
+    
+    def __str__(self):
+        return self.contrib_caption or u''
+        
+    def __repr__(self):
+        return self.contrib_caption or u''
+
+    class Meta:
+        verbose_name = 'ForumContribution'
+        verbose_name_plural = 'ForumContributions'

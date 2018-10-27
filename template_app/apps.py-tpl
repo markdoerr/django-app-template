@@ -1,0 +1,30 @@
+"""_____________________________________________________________________
+
+:PROJECT: LARA
+
+*{{ app_name }} apps *
+
+:details: {{ app_name }} app configuration. This provides a genaric 
+         django app configuration mechanism.
+         For more details see:
+         https://docs.djangoproject.com/en/2.0/ref/applications/
+
+:file:    apps.py
+:authors: {{ authors }}
+
+:date: (creation)          {{ creation_date }}
+:date: (last modification) {{ creation_date }}
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+__version__ = "0.0.1"
+
+from django.apps import AppConfig
+
+class {{ camel_case_app_name }}Config(AppConfig):
+    name = '{{ app_name }}'
+    # verbose_name = "enter a verbose name for your app: {{ app_name }} here - this will be used in the admin interface"
+    # lara_app_icon = '{{ app_name }}_icon.svg'  # this will be used to display an icon, e.g. in the main LARA menu.
+

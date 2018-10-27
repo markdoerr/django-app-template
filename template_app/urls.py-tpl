@@ -1,0 +1,30 @@
+"""_____________________________________________________________________
+
+:PROJECT: LARA
+
+*{{ app_name }} urls *
+
+:details: {{ app_name }} urls module.
+         - add app specific urls here
+
+:file:    urls.py
+:authors: {{ authors }}
+
+:date: (creation)          {{ creation_date }}
+:date: (last modification) {{ creation_date }}
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+__version__ = "0.0.1"
+
+from django.urls import path, include
+from django.views.generic import TemplateView
+
+# Add your {{ app_name }} urls here.
+
+urlpatterns = [
+    # path('', TemplateView.as_view(template_name='index.html'), name='{{ app_name }}-main-view'),
+    # path('subdir/', include('.urls')),
+]

@@ -1,0 +1,24 @@
+"""_____________________________________________________________________
+
+:PROJECT: LARA
+
+*{{ app_name }} forms *
+
+:details: {{ app_name }} forms module.
+         - 
+
+:file:    views.py
+:authors: {{ authors }}
+
+:date: (creation)          {{ creation_date }}
+:date: (last modification) {{ creation_date }}
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+__version__ = "0.0.1"
+
+from django.shortcuts import render
+
+# Create your {{ app_name }} views here.

@@ -1,0 +1,28 @@
+"""_____________________________________________________________________
+
+:PROJECT: LARA
+
+*{{ app_name }} admin *
+
+:details: {{ app_name }} admin module admin backend configuration.
+         - 
+
+:file:    admin.py
+:authors: {{ authors }}
+
+:date: (creation)          {{ creation_date }}
+:date: (last modification) {{ creation_date }}
+
+.. note:: -
+.. todo:: - 
+________________________________________________________________________
+"""
+__version__ = "0.0.1"
+
+from django.contrib import admin
+
+from .models import ItemCategory, ForumContribution
+
+admin.site.register(ItemCategory)
+admin.site.register(ForumContribution)
+
